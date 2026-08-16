@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BharatForm - सरकारी नौकरी, योजना, Form और Scholarship</title>
+
+  <meta name="description"
+    content="BharatForm पर सरकारी नौकरी, सरकारी योजनाओं, forms, scholarships, admit card, results और career information की सरल जानकारी पाएं।">
+
+  <meta name="robots" content="index, follow">
+
+  <!-- BharatForm GitHub Pages URL -->
+  <link rel="canonical"
+    href="https://patelyashvant197.github.io/Bharatform/">
+
+  <!-- Open Graph -->
+  <meta property="og:title"
+    content="BharatForm - सरकारी नौकरी, योजना और Form">
+
+  <meta property="og:description"
+    content="सरकारी नौकरी, योजनाओं, forms, scholarships और career updates एक जगह।">
+
+  <meta property="og:type" content="website">
+
+  <meta property="og:url"
+    content="https://patelyashvant197.github.io/Bharatform/">
+
+  <!-- Website Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "BharatForm",
+    "url": "https://patelyashvant197.github.io/Bharatform/",
+    "description": "सरकारी नौकरी, योजना, forms और scholarships की जानकारी"
+  }
+  </script>
+
+  <style>
+
+    :root {
+      --primary: #0b57d0;
+      --primary-dark: #084298;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --border: #e4e7ec;
+      --warning: #b54708;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .logo span {
+      color: #111827;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      list-style: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 55px 0;
+      background: linear-gradient(135deg, #eaf2ff, #ffffff);
+    }
+
+    .hero-content {
+      max-width: 760px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
+
+    .search-box {
+      display: flex;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 6px;
+      max-width: 650px;
+      margin: auto;
+      box-shadow: 0 8px 25px rgba(16, 24, 40, 0.08);
+    }
+
+    .search-box input {
+      flex: 1;
+      border: 0;
+      outline: 0;
+      padding: 13px;
+      font-size: 15px;
+    }
+
+    .search-box button {
+      border: 0;
+      background: var(--primary);
+      color: white;
+      padding: 0 22px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 45px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .section-title h2 {
+      font-size: 28px;
+      margin-bottom: 7px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+    }
+
+    /* CATEGORY */
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .category-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 23px 15px;
+      border-radius: 14px;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .category-card:hover {
+      transform: translateY(-3px);
+      border-color: #b8ccf5;
+      box-shadow: 0 8px 20px rgba(16, 24, 40, 0.07);
+    }
+
+    .category-icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .category-card h3 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .category-card p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* CARDS */
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .info-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .demo-label {
+      display: inline-block;
+      background: #fff4e5;
+      color: var(--warning);
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .info-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .info-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    .details-btn {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* WHY */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .why-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .why-card h3 {
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+
+    .why-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* FAQ */
+
+    .faq {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      border: 0;
+      background: white;
+      padding: 16px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 16px 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #101828;
+      color: white;
+      padding: 35px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    footer h3 {
+      margin-bottom: 10px;
+    }
+
+    footer p,
+    footer a {
+      color: #b8c0cc;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #344054;
+      margin-top: 25px;
+      padding-top: 18px;
+      color: #98a2b3;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        padding: 15px 4%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .category-grid,
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .hero {
+        padding: 40px 0;
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .category-card {
+        padding: 18px 8px;
+      }
+
+      .search-box {
+        flex-direction: column;
+        gap: 6px;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .search-box input {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+      }
+
+      .search-box button {
+        min-height: 45px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="container navbar">
+
+    <a href="index.html" class="logo">
+      Bharat<span>Form</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">
+      ☰
+    </button>
+
+    <nav>
+
+      <ul class="nav-links" id="navLinks">
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Latest Jobs</a></li>
+        <li><a href="schemes.html">Sarkari Yojana</a></li>
+        <li><a href="forms.html">Forms</a></li>
+        <li><a href="scholarships.html">Scholarships</a></li>
+        <li><a href="admit-card.html">Admit Card</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="career.html">Career</a></li>
+
+      </ul>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <h1>
+        सरकारी नौकरी और योजनाओं की
+        <span>सही जानकारी</span>
+      </h1>
+
+      <p>
+        Jobs, सरकारी योजनाएं, Forms, Scholarships और
+        Career updates एक जगह।
+      </p>
+
+      <form class="search-box" id="searchForm">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="नौकरी, योजना या फॉर्म खोजें..."
+          aria-label="Search">
+
+        <button type="submit">
+          Search
+        </button>
+
+      </form>
+
+      <div id="searchResults"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CATEGORIES -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>मुख्य Categories</h2>
+
+        <p>
+          अपनी जरूरत के अनुसार जानकारी चुनें
+        </p>
+
+      </div>
+
+
+      <div class="category-grid">
+
+        <a class="category-card" href="jobs.html">
+
+          <div class="category-icon">💼</div>
+
+          <h3>Government Jobs</h3>
+
+          <p>सरकारी नौकरी updates</p>
+
+        </a>
+
+
+        <a class="category-card" href="schemes.html">
+
+          <div class="category-icon">🏛️</div>
+
+          <h3>Sarkari Yojana</h3>
+
+          <p>सरकारी योजनाओं की जानकारी</p>
+
+        </a>
+
+
+        <a class="category-card" href="forms.html">
+
+          <div class="category-icon">📄</div>
+
+          <h3>Government Forms</h3>
+
+          <p>Forms और application guides</p>
+
+        </a>
+
+
+        <a class="category-card" href="scholarships.html">
+
+          <div class="category-icon">🎓</div>
+
+          <h3>Scholarships</h3>
+
+          <p>Scholarship information</p>
+
+        </a>
+
+
+        <a class="category-card" href="admit-card.html">
+
+          <div class="category-icon">🎫</div>
+
+          <h3>Admit Card</h3>
+
+          <p>Admit card updates</p>
+
+        </a>
+
+
+        <a class="category-card" href="results.html">
+
+          <div class="category-icon">📊</div>
+
+          <h3>Results</h3>
+
+          <p>Exam result information</p>
+
+        </a>
+
+
+        <a class="category-card" href="career.html">
+
+          <div class="category-icon">🚀</div>
+
+          <h3>Career Guide</h3>
+
+          <p>Career और preparation</p>
+
+        </a>
+
+
+        <a class="category-card" href="jobs.html">
+
+          <div class="category-icon">🔎</div>
+
+          <h3>Latest Updates</h3>
+
+          <p>नई information देखें</p>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- JOBS -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Latest Government Jobs</h2>
+
+        <p>
+          Demo cards — वास्तविक जानकारी publish करने से पहले
+          official notification verify करें।
+        </p>
+
+      </div>
+
+
+      <div class="card-grid">
+
+        <article class="info-card searchable">
+
+          <span class="demo-label">DEMO</span>
+
+          <h3>12वीं पास Government Job</h3>
+
+          <p>Qualification: 12th Pass</p>
+
+          <p>Department: Demo Department</p>
+
+          <p>Last Date: Demo Date</p>
+
+          <a href="jobs.html" class="details-btn">
+            View Details →
+          </a>
+
+        </article>
+
+
+        <article class="info-card searchable">
+
+          <span class="demo-label">DEMO</span>
+
+          <h3>Graduate Government Job</h3>
+
+          <p>Qualification: Graduation</p>
+
+          <p>Department: Demo Department</p>
+
+          <p>Last Date: Demo Date</p>
+
+          <a href="jobs.html" class="details-btn">
+            View Details →
+          </a>
+
+        </article>
+
+
+        <article class="info-card searchable">
+
+          <span class="demo-label">DEMO</span>
+
+          <h3>Railway Recruitment</h3>
+
+          <p>Qualification: Demo Qualification</p>
+
+          <p>Department: Demo Railway Department</p>
+
+          <p>Last Date: Demo Date</p>
+
+          <a href="jobs.html" class="details-btn">
+            View Details →
+          </a>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SCHEMES -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Latest Sarkari Yojana</h2>
+
+        <p>
+          सरकारी योजनाओं की verified information यहां जोड़ें।
+        </p>
+
+      </div>
+
+
+      <div class="card-grid">
+
+        <article class="info-card searchable">
+
+          <span class="demo-label">DEMO</span>
+
+          <h3>किसान योजना</h3>
+
+          <p>
+            Eligibility और application process की जानकारी।
+          </p>
+
+          <a href="schemes.html" class="details-btn">
+            Read More →
+          </a>
+
+        </article>
+
+
+        <article class="info-card searchable">
+
+          <span class="demo-label">DEMO</span>
+
+          <h3>महिला योजना</h3>
+
+          <p>
+            महिलाओं के लिए सरकारी सहायता की जानकारी।
+          </p>
+
+          <a href="schemes.html" class="details-btn">
+            Read More →
+          </a>
+
+        </article>
+
+
+        <article class="info-card searchable">
+
+          <span class="demo-label">DEMO</span>
+
+          <h3>युवा योजना</h3>
+
+          <p>
+            युवाओं के लिए government scheme information।
+          </p>
+
+          <a href="schemes.html" class="details-btn">
+            Read More →
+          </a>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FORMS -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Important Forms</h2>
+
+        <p>
+          Application और form-related guides
+        </p>
+
+      </div>
+
+
+      <div class="card-grid">
+
+        <article class="info-card searchable">
+
+          <span class="demo-label">DEMO</span>
+
+          <h3>Government Form Guide</h3>
+
+          <p>
+            Online application भरने की step-by-step जानकारी।
+          </p>
+
+          <a href="forms.html" class="details-btn">
+            Read More →
+          </a>
+
+        </article>
+
+
+        <article class="info-card searchable">
+
+          <span class="demo-label">DEMO</span>
+
+          <h3>Application Status</h3>
+
+          <p>
+            Application status check करने की जानकारी।
+          </p>
+
+          <a href="forms.html" class="details-btn">
+            Read More →
+          </a>
+
+        </article>
+
+
+        <article class="info-card searchable">
+
+          <span class="demo-label">DEMO</span>
+
+          <h3>Form Correction</h3>
+
+          <p>
+            Application correction process की जानकारी।
+          </p>
+
+          <a href="forms.html" class="details-btn">
+            Read More →
+          </a>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY BHARATFORM -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>क्यों BharatForm?</h2>
+
+      </div>
+
+
+      <div class="why-grid">
+
+        <div class="why-card">
+
+          <h3>✅ Official Source Focus</h3>
+
+          <p>
+            Government information publish करने से पहले
+            official source verify करने पर focus।
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <h3>📱 Easy Hindi</h3>
+
+          <p>
+            Complex information को simple Hindi में
+            समझाने की कोशिश।
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <h3>📋 Step-by-Step</h3>
+
+          <p>
+            Application और form process को आसान steps में
+            समझाया जाएगा।
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <h3>🔄 Regular Updates</h3>
+
+          <p>
+            Important information को official updates के
+            अनुसार update करने का प्रयास।
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Frequently Asked Questions</h2>
+
+      </div>
+
+
+      <div class="faq">
+
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+            BharatForm क्या है?
+          </button>
+
+          <div class="faq-answer">
+
+            BharatForm एक information portal concept है
+            जहां सरकारी नौकरी, योजनाओं, forms, scholarships
+            और career information को सरल भाषा में प्रस्तुत किया जाएगा।
+
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+            क्या BharatForm सरकारी वेबसाइट है?
+          </button>
+
+          <div class="faq-answer">
+
+            नहीं। BharatForm एक independent information website है।
+            सरकारी जानकारी के लिए संबंधित department की official
+            website और notification को हमेशा verify करें।
+
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button class="faq-question">
+            क्या यहां दी गई जानकारी official है?
+          </button>
+
+          <div class="faq-answer">
+
+            Website का उद्देश्य official sources से information को
+            आसान भाषा में समझाना है। किसी भी application से पहले
+            संबंधित सरकारी विभाग की official notification जरूर check करें।
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+
+      <div>
+
+        <h3>BharatForm</h3>
+
+        <p>
+          सरकारी नौकरी, योजना, forms, scholarships और
+          career information के लिए independent information portal.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>Quick Links</h3>
+
+        <div class="footer-links">
+
+          <a href="jobs.html">Latest Jobs</a>
+
+          <a href="schemes.html">Sarkari Yojana</a>
+
+          <a href="forms.html">Forms</a>
+
+          <a href="scholarships.html">Scholarships</a>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h3>Important</h3>
+
+        <div class="footer-links">
+
+          <a href="about.html">About Us</a>
+
+          <a href="contact.html">Contact</a>
+
+          <a href="privacy-policy.html">Privacy Policy</a>
+
+          <a href="disclaimer.html">Disclaimer</a>
+
+          <a href="terms.html">Terms</a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+      <p>
+        © 2026 BharatForm. All rights reserved.
+      </p>
+
+      <p>
+        BharatForm is not a government website.
+        Always verify information from official sources.
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+  /* MOBILE MENU */
+
+  const menuBtn =
+    document.getElementById("menuBtn");
+
+  const navLinks =
+    document.getElementById("navLinks");
+
+  menuBtn.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+  });
+
+
+  /* FAQ */
+
+  const faqQuestions =
+    document.querySelectorAll(".faq-question");
+
+  faqQuestions.forEach(question => {
+
+    question.addEventListener("click", () => {
+
+      const item =
+        question.parentElement;
+
+      item.classList.toggle("active");
+
+    });
+
+  });
+
+
+  /* SEARCH */
+
+  const searchForm =
+    document.getElementById("searchForm");
+
+  const searchInput =
+    document.getElementById("searchInput");
+
+  const searchResults =
+    document.getElementById("searchResults");
+
+  const searchableCards =
+    document.querySelectorAll(".searchable");
+
+
+  searchForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const query =
+      searchInput.value.trim().toLowerCase();
+
+
+    if (!query) {
+
+      searchResults.innerHTML =
+        "<p style='margin-top:15px;color:#667085;'>कृपया कुछ खोजें।</p>";
+
+      return;
+
+    }
+
+
+    let found = [];
+
+
+    searchableCards.forEach(card => {
+
+      const text =
+        card.innerText.toLowerCase();
+
+      if (text.includes(query)) {
+
+        found.push(card);
+
+      }
+
+    });
+
+
+    if (found.length === 0) {
+
+      searchResults.innerHTML =
+        "<p style='margin-top:15px;color:#b54708;'>कोई matching result नहीं मिला।</p>";
+
+      return;
+
+    }
+
+
+    searchResults.innerHTML =
+      "<div style='margin-top:15px;text-align:left;background:white;padding:15px;border-radius:10px;border:1px solid #e4e7ec;'>" +
+      "<strong>" +
+      found.length +
+      " result मिले।</strong><br><br>" +
+      found.map(card =>
+        card.querySelector("h3").innerText
+      ).join("<br>") +
+      "</div>";
+
+  });
+
+</script>
+
+</body>
+</html>
